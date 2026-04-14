@@ -1,0 +1,187 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* =========================
+   GLOBAL DARK THEME ONLY
+========================= */
+
+:root {
+  /* BACKGROUNDS */
+  --background: 0 0% 0%;           /* PURE BLACK */
+  --foreground: 0 0% 100%;         /* PURE WHITE */
+
+  --card: 0 0% 0%;
+  --card-foreground: 0 0% 100%;
+
+  --popover: 0 0% 0%;
+  --popover-foreground: 0 0% 100%;
+
+  /* PRIMARY COLORS */
+  --primary: 211 100% 55%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 186 100% 50%;
+  --secondary-foreground: 0 0% 100%;
+
+  /* REMOVE GREY LOOK */
+  --muted: 0 0% 0%;
+  --muted-foreground: 0 0% 100%;
+
+  /* ACCENTS */
+  --accent: 0 93% 54%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  /* BORDERS */
+  --border: 0 0% 20%;   /* subtle grey border */
+  --input: 0 0% 20%;
+  --ring: 211 100% 55%;
+
+  /* CHART COLORS */
+  --chart-1: 211 100% 55%;
+  --chart-2: 186 100% 50%;
+  --chart-3: 16 100% 50%;
+  --chart-4: 160 84% 39%;
+  --chart-5: 280 85% 65%;
+
+  /* RADIUS */
+  --radius: 0.75rem;
+
+  /* SIDEBAR */
+  --sidebar: 0 0% 0%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-primary: 211 100% 55%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 186 100% 50%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 0 0% 20%;
+  --sidebar-ring: 211 100% 55%;
+}
+
+/* REMOVE LIGHT MODE COMPLETELY */
+.dark {
+  all: unset;
+}
+
+/* =========================
+   THEME MAPPING
+========================= */
+
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback';
+  --font-serif: 'Georgia', serif;
+  --font-mono: 'Courier New', monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+}
+
+/* =========================
+   BASE STYLING
+========================= */
+
+@layer base {
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-black text-white;
+  }
+
+  /* FORCE WHITE TEXT EVERYWHERE */
+  p, span, div, li, a, label {
+    color: white;
+  }
+
+  /* HEADINGS */
+  h1, h2 {
+    color: white;
+    font-family: var(--font-space-grotesk);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #b91c1c; /* red-700 */
+    text-underline-offset: 12px;
+    text-decoration-thickness: 3px;
+  }
+
+  h3, h4, h5, h6 {
+    color: white;
+    font-family: var(--font-space-grotesk);
+    font-weight: 600;
+  }
+}
+
+/* =========================
+   CARD & SECTION CONTROL
+========================= */
+
+/* Force all cards black */
+.card, .bg-card {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* Sections */
+section {
+  background-color: black;
+}
+
+/* Buttons */
+button {
+  color: white;
+}
+
+/* Links */
+a {
+  color: white;
+}
+
+/* Inputs */
+input, textarea {
+  background-color: black;
+  color: white;
+  border-color: hsl(0 0% 20%);
+}
