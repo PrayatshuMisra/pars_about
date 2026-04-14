@@ -51,7 +51,7 @@ export default function RootLayout({
     <html 
       lang="en" 
       suppressHydrationWarning
-      className={`${spaceGrotesk.variable} ${inter.variable} bg-background`}
+      className={`${spaceGrotesk.variable} ${inter.variable}`}
     >
       <body className="font-sans antialiased text-foreground">
         {/* Video Background */}

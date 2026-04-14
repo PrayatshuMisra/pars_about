@@ -80,20 +80,23 @@ export function FooterSection() {
               </ul>
             </motion.div>
 
-            {/* Legal */}
+            {/* Contact */}
             <motion.div variants={itemVariants}>
-              <h4 className="font-space-grotesk font-semibold text-foreground mb-4">Legal</h4>
-              <ul className="space-y-2">
-                {['Privacy', 'Terms', 'Security', 'Compliance'].map((item) => (
-                  <li key={item}>
-                    <Link
-                      href="#"
-                      className="text-foreground/60 hover:text-primary transition-colors text-sm"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ))}
+              <h4 className="font-space-grotesk font-semibold text-foreground mb-4 underline decoration-red-700 underline-offset-8">Contact</h4>
+              <ul className="space-y-4">
+                <li>
+                  <Link
+                    href="mailto:pars-medical@proton.me"
+                    className="text-foreground/60 hover:text-red-700 transition-colors text-sm break-all"
+                  >
+                    pars-medical@proton.me
+                  </Link>
+                </li>
+                <li className="text-foreground/60 text-sm leading-relaxed">
+                  Innovation Centre, AB4,<br />
+                  MIT MANIPAL, Udupi,<br />
+                  Karnataka - 576104
+                </li>
               </ul>
             </motion.div>
           </motion.div>
@@ -106,10 +109,10 @@ export function FooterSection() {
             className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4"
           >
             <p className="text-foreground/60 text-sm">
-              © 2025 PARS Health. All rights reserved.
+              © 2026 PARS Health. All rights reserved.
             </p>
             <div className="flex gap-6">
-              {['Twitter', 'LinkedIn', 'GitHub'].map((social) => (
+              {['LinkedIn'].map((social) => (
                 <Link
                   key={social}
                   href="#"
