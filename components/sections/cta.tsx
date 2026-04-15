@@ -57,14 +57,14 @@ export function CTASection() {
             >
               <button 
                 onClick={() => setShowForm(true)}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-black text-white rounded-xl font-bold hover:bg-white hover:text-black transition-all duration-300 shadow-xl"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-primary/20 bg-black text-white rounded-xl font-bold hover:bg-red-700 hover:text-white transition-all duration-300 shadow-xl"
               >
                 Request Demo
                 <ArrowRight className="w-4 h-4" />
               </button>
               <Link
                 href="mailto:pars-medical@proton.me"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-black text-white rounded-xl font-bold hover:bg-white hover:text-black transition-all duration-300 shadow-xl"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-primary/20 bg-black text-white rounded-xl font-bold hover:bg-red-700 hover:text-white transition-all duration-300 shadow-xl"
               >
                 Partner With Us
               </Link>

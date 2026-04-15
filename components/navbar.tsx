@@ -69,12 +69,12 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative group px-4 py-2 rounded-full bg-white border border-white/20 hover:bg-red-800 hover:border-white-800 transition-all duration-300 shadow-sm"
+                className="relative group px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 hover:bg-red-800 hover:border-red-800 transition-all duration-300 shadow-sm"
               >
-                <span className="text-black group-hover:text-white transition-colors duration-300 font-medium text-sm tracking-wide">
+                <span className="text-white/90 group-hover:text-white transition-colors duration-300 font-medium text-sm tracking-wide">
                   {link.label}
                 </span>
-                {/* Subtle Centered Underline Effect (White to match the red hover) */}
+                {/* Subtle Centered Underline Effect */}
                 <span className="absolute -bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-[2px] bg-white rounded-full scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center opacity-0 group-hover:opacity-100" />
               </Link>
             ))}
@@ -117,7 +117,7 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block px-4 py-3 rounded-2xl bg-white border border-transparent hover:bg-red-500 text-black hover:text-white transition-all duration-300 font-medium text-center shadow-sm"
+                  className="block px-4 py-3 rounded-2xl bg-white/5 border border-white/10 hover:bg-red-800 text-white/90 hover:text-white transition-all duration-300 font-medium text-center shadow-sm"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}

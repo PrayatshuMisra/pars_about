@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Send } from 'lucide-react'
+import { toast } from 'sonner'
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -26,17 +27,38 @@ export function ContactForm() {
     e.preventDefault()
     setLoading(true)
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setSubmitted(true)
-    setLoading(false)
+      const data = await response.json();
 
-    // Reset after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false)
-      setFormData({ name: '', email: '', hospital: '', message: '' })
-    }, 3000)
+      if (response.ok) {
+        toast.success('Demo request sent successfully!');
+        setSubmitted(true);
+        // Reset form data
+        setFormData({ name: '', email: '', hospital: '', message: '' });
+      } else {
+        toast.error(data.error || 'Failed to send demo request.');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      toast.error('An unexpected error occurred. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+
+    // Reset success state after 10 seconds if they want to send another
+    if (submitted) {
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 10000);
+    }
   }
 
   if (submitted) {

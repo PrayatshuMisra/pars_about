@@ -144,14 +144,14 @@ export function HeroSection() {
         >
           <Link
             href="#contact"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-primary/20 bg-black text-white rounded-xl font-bold hover:bg-white hover:text-black transition-all duration-300 shadow-xl"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-primary/20 bg-black text-white rounded-xl font-bold hover:bg-red-700 hover:text-white transition-all duration-300 shadow-xl"
           >
             Request a Demo
             <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
             href="#demo"
-            className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary/20 bg-black text-white rounded-xl font-bold hover:bg-white hover:text-black transition-all duration-300 shadow-xl"
+            className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary/20 bg-black text-white rounded-xl font-bold hover:bg-red-700 hover:text-white transition-all duration-300 shadow-xl"
           >
             View Live Prototype
           </Link>

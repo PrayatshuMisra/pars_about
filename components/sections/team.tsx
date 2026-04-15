@@ -6,7 +6,7 @@ import { Mail, Linkedin } from 'lucide-react'
 const team = [
   {
     name: 'Prayatshu Misra',
-    role: 'Co-Founder & Technical Systems Lead',
+    role: 'Co-Founder',
     background: 'Architecting the core AI logic and high-level system integration for healthcare automation',
     email: 'prayatshumisra.pars@gmail.com',
     linkedin: 'https://www.linkedin.com/in/prayatshu-misra-1834a831a',
@@ -14,7 +14,7 @@ const team = [
   },
   {
     name: 'Advait Balachandar',
-    role: 'Co-Founder & Product Experience',
+    role: 'Co-Founder',
     background: 'Bridging the gap between complex clinical data and intuitive user-centric healthcare interfaces',
     email: 'advait.pars@gmail.com',
     linkedin: 'https://www.linkedin.com/in/advait-balachandar-693525343?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
@@ -22,7 +22,7 @@ const team = [
   },
   {
     name: 'Rohan Mathur',
-    role: 'Co-Founder & Backend / Deployment Systems Lead',
+    role: 'Co-Founder',
     background: 'Building robust server-side architecture and managing secure cloud deployment for clinical environments',
     email: 'rohanmat.pars@gmail.com',
     linkedin: 'https://www.linkedin.com/in/rohan-mathur-mit',
@@ -30,7 +30,7 @@ const team = [
   },
   {
     name: 'Shreshth Kabra',
-    role: 'Co-Founder & ML Operations Lead',
+    role: 'Co-Founder',
     background: 'Optimizing machine learning pipelines and ensuring model reliability across medical datasets',
     email: 'shreshth.pars@gmail.com',
     linkedin: 'https://www.linkedin.com/in/shreshth-kabra-51788a333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',

@@ -119,7 +119,7 @@ export function CollaborationSection() {
             <motion.div variants={itemVariants} className="mt-8">
               <a
                 href="#contact"
-                className="inline-flex w-full items-center justify-center px-6 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all hover:shadow-lg hover:shadow-primary/20"
+                className="inline-flex w-full items-center justify-center px-6 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-red-700 hover:text-white transition-all hover:shadow-lg hover:shadow-primary/20"
               >
                 Start a Conversation
               </a>
