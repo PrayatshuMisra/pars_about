@@ -13,31 +13,37 @@ export async function POST(req: Request) {
       );
     }
 
+    const smtpUser = process.env.SMTP_USER ?? '';
+    // Strip spaces from App Password (Google shows them with spaces for readability)
+    const smtpPass = (process.env.SMTP_PASS ?? '').replace(/\s/g, '');
+    const smtpHost = process.env.SMTP_HOST ?? 'smtp.gmail.com';
+    const smtpPort = Number(process.env.SMTP_PORT) || 587;
+
     // Create a transporter using SMTP
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: process.env.SMTP_PORT === '465', // true for 465, false for other ports
+      host: smtpHost,
+      port: smtpPort,
+      secure: smtpPort === 465, // true only for 465 (SSL), false for 587 (TLS/STARTTLS)
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: smtpUser,
+        pass: smtpPass,
       },
     });
 
-    // Email options
+    // Email to PARS team
     const mailOptions = {
-      from: `"${name}" <${process.env.SMTP_USER}>`, // Recommended to send from your own authenticated email
-      to: 'pars-medical@proton.me',
-      replyTo: email, // User's email for easy replying
+      from: `PARS Health Demo Request <${smtpUser}>`,
+      to: 'parswork.in@gmail.com',
+      replyTo: email,
       subject: `New Demo Request from ${name} (${hospital})`,
       text: `
-        Name: ${name}
-        Email: ${email}
-        Hospital/Organization: ${hospital}
-        
-        Message:
-        ${message}
-      `,
+Name: ${name}
+Email: ${email}
+Hospital/Organization: ${hospital}
+
+Message:
+${message}
+      `.trim(),
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #eee; border-radius: 10px;">
           <h2 style="color: #b91c1c; margin-bottom: 20px;">New Demo Request</h2>
@@ -51,12 +57,18 @@ export async function POST(req: Request) {
       `,
     };
 
-    // Send the email
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
-  } catch (error) {
-    console.error('Error sending email:', error);
+  } catch (error: unknown) {
+    // Log the real error on the server so you can debug
+    console.error('=== SMTP Error ===');
+    if (error instanceof Error) {
+      console.error('Message:', error.message);
+      console.error('Stack:', error.stack);
+    } else {
+      console.error(error);
+    }
     return NextResponse.json(
       { error: 'Failed to send email. Please try again later.' },
       { status: 500 }

@@ -36,6 +36,19 @@ export function ContactForm() {
         body: JSON.stringify(formData),
       });
 
+      // Guard: only a true 404 means the route is missing
+      if (response.status === 404) {
+        toast.error('API route not found. Please contact the team directly.');
+        return;
+      }
+
+      // Guard: if response isn't JSON (unexpected error), handle gracefully
+      const contentType = response.headers.get('content-type');
+      if (!contentType || !contentType.includes('application/json')) {
+        toast.error('Unexpected server error. Please try again later.');
+        return;
+      }
+
       const data = await response.json();
 
       if (response.ok) {

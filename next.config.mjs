@@ -1,15 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
     ignoreBuildErrors: false,
   },
   images: {
     unoptimized: true,
   },
+  // Prevent Next.js/Turbopack from bundling Node.js-only modules
+  serverExternalPackages: ['nodemailer'],
 }
 
 export default nextConfig
