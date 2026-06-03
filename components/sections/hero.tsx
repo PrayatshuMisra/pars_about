@@ -9,7 +9,7 @@ const HERO_IMAGES = [
   '/2.jpeg',
   '/3.jpeg',
   '/4.jpeg',
-  '/5.jpeg
+  '/5.png
 ]
 
 function HeroCarousel() {
