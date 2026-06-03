@@ -93,8 +93,8 @@ export function FooterSection() {
                   </Link>
                 </li>
                 <li className="text-foreground/60 text-sm leading-relaxed">
-                  Innovation Centre, AB4,<br />
-                  MIT MANIPAL, Udupi,<br />
+                  Innovation Centre-AB4,<br />
+                  MIT Manipal, Udupi,<br />
                   Karnataka - 576104
                 </li>
               </ul>
@@ -115,7 +115,7 @@ export function FooterSection() {
               {['LinkedIn'].map((social) => (
                 <Link
                   key={social}
-                  href="#"
+                  href="https://www.linkedin.com/company/parswork"
                   className="text-foreground/60 hover:text-primary transition-colors text-sm"
                 >
                   {social}
