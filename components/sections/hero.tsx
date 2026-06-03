@@ -6,10 +6,10 @@ import { ArrowRight, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
 
 const HERO_IMAGES = [
-  '/1.jpeg',
   '/2.jpeg',
   '/3.jpeg',
-  '/4.jpeg'
+  '/4.jpeg',
+  '/5.jpeg
 ]
 
 function HeroCarousel() {
