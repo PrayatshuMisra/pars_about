@@ -1,5 +1,7 @@
 <h1>PARS</h1>
+
 ***PARS*** is an AI-powered healthcare operations platform built to reduce administrative burden on hospitals and improve patient care delivery. It operates across two connected product lines:
+
 1. Emergency Department Triage
 AI analyzes patient symptoms, vitals, and medical history to help clinical staff assess risk levels and route patients appropriately — acting as a decision-support layer, not a replacement for clinicians. Transparent, explainable recommendations are a key design principle.
 
