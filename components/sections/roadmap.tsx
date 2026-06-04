@@ -99,7 +99,7 @@ export function RoadmapSection() {
                       {phase.phase}
                     </h3>
                     <p className={`text-xs font-bold uppercase tracking-widest mt-1 ${
-                      phase.status === 'Completed' || phase.status === 'In progress'
+                      phase.status === 'Completed' || phase.status === 'In progress' ?
                       'text-red-700' : 'text-white/30'
                     }`}>
                       {phase.status}
