@@ -77,7 +77,7 @@ export function TeamSection() {
             Founding <span className="text-red-700">Team</span>
           </motion.h2>
           <motion.p variants={itemVariants} className="text-lg text-foreground/60 mt-4 max-w-2xl mx-auto">
-            All founders are second-year Computer Science students at MIT Manipal
+            All founders are Undergraduate Computer Science students at MIT Manipal
           </motion.p>
         </motion.div>
 
