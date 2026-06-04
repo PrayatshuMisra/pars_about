@@ -6,7 +6,7 @@ import { CheckCircle2, Circle, ArrowRight } from 'lucide-react'
 const roadmap = [
   {
     phase: 'Phase 1',
-    status: 'In Progress',
+    status: 'Completed',
     items: [
       'Prototype Development',
       'Triage System Core',
@@ -15,18 +15,18 @@ const roadmap = [
   },
   {
     phase: 'Phase 2',
-    status: 'Upcoming',
+    status: 'In progress',
     items: [
       'AI Model Iteration',
       'Clinical Feedback Integration',
-      'System Refinement',
+      'Clinical Validation',
     ],
   },
   {
     phase: 'Phase 3',
     status: 'Upcoming',
     items: [
-      'Clinical Validation',
+      'System Refinement',
       'Pilot Testing with Clinics',
       'Full Deployment Readiness',
     ],
