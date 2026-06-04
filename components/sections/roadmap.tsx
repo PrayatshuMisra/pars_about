@@ -82,14 +82,14 @@ export function RoadmapSection() {
               <motion.div
                 variants={itemVariants}
                 className={`relative p-8 rounded-2xl border transition-all duration-300 h-full ${
-                  phase.status === 'In Progress'
+                  phase.status === 'Completed' || phase.status === 'In progress'
                     ? 'bg-black border-red-700/50 shadow-[0_0_20px_rgba(185,28,28,0.1)]'
                     : 'bg-black border-border/50 hover:border-primary/30'
                 }`}
               >
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-6">
-                  {phase.status === 'In Progress' ? (
+                  {phase.status === 'Completed' || phase.status === 'In progress' ?  (
                     <CheckCircle2 className="w-6 h-6 text-red-700 flex-shrink-0" />
                   ) : (
                     <Circle className="w-6 h-6 text-white/20 flex-shrink-0" />
@@ -99,7 +99,8 @@ export function RoadmapSection() {
                       {phase.phase}
                     </h3>
                     <p className={`text-xs font-bold uppercase tracking-widest mt-1 ${
-                      phase.status === 'In Progress' ? 'text-red-700' : 'text-white/30'
+                      phase.status === 'Completed' || phase.status === 'In progress'
+                      'text-red-700' : 'text-white/30'
                     }`}>
                       {phase.status}
                     </p>
@@ -110,7 +111,9 @@ export function RoadmapSection() {
                   {phase.items.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <div className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 ${
-                        phase.status === 'In Progress' ? 'bg-red-700' : 'bg-primary/40'
+                        phase.status === 'Completed' || phase.status === 'In progress'
+                            ? 'bg-red-700'
+                            : 'bg-primary/40'
                       }`} />
                       <span className="text-white/60 text-sm font-medium leading-relaxed group-hover/roadmap-item:text-white transition-colors">
                         {item}
