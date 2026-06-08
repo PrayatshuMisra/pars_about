@@ -20,7 +20,7 @@ const timeline = [
     description: 'Selected for incubation at MIT Manipal Innovation Centre. Began development as a startup team.',
   },
   {
-    year: 'Future',
+    year: 'In Progress',
     title: 'Clinical Validation',
     description: 'Clinical feedback & validation, pilot testing with clinics, and continuous AI improvement.',
   },
