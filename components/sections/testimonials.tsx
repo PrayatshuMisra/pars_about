@@ -92,10 +92,9 @@ export function TestimonialsSection() {
           
           {/* Left Arrow */}
           <button
-            onClick={handlePrev}
-            className="absolute left-0 sm:-left-4 z-10 p-2 rounded-full bg-black/50 border border-border/50 text-foreground/70 hover:text-foreground hover:bg-black hover:border-primary/50 transition-all focus:outline-none"
-            aria-label="Previous testimonial"
-          >
+          onClick={handlePrev}
+          className="absolute left-0 sm:-left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/50 border border-border/50 text-foreground/70 hover:text-foreground hover:bg-black hover:border-primary/50 transition-all focus:outline-none"
+              >
             <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
           </button>
 
@@ -160,10 +159,9 @@ export function TestimonialsSection() {
 
           {/* Right Arrow */}
           <button
-            onClick={handleNext}
-            className="absolute right-0 sm:-right-4 z-10 p-2 rounded-full bg-black/50 border border-border/50 text-foreground/70 hover:text-foreground hover:bg-black hover:border-primary/50 transition-all focus:outline-none"
-            aria-label="Next testimonial"
-          >
+  onClick={handleNext}
+  className="absolute right-0 sm:-right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/50 border border-border/50 text-foreground/70 hover:text-foreground hover:bg-black hover:border-primary/50 transition-all focus:outline-none"
+>
             <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
           </button>
         </div>
